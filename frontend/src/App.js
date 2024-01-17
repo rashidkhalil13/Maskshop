@@ -1,37 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-import data from './data';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import HomeScreen from './screens/HomeScreen';
+import ProductScreen from './screens/ProductScreen';
 
 function App() {
   return (
-    <div>
-      <header>
-        <a href="/">Makshop</a>
-      </header>
-      <main>
-        <h1>Featured products</h1>
-        <div className="Products">
-          {data.products.map((product) => (
-            <div className="Product" key={product.slug}>
-              <a href={`/Product/${product.slug}`}>
-                <img src={product.image} alt={product.name} />
-              </a>
-
-              <div className="Product-info">
-                <a href={`/Product/${product.slug}`}>
-                  <p>{product.name}</p>
-                </a>
-                <p>
-                  <strong>${product.price}</strong>
-                </p>
-
-                <button>Add to cart</button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </main>
-    </div>
+    <BrowserRouter>
+      <div>
+        <header>
+          <Link to="/">Makshop</Link>
+        </header>
+        <main>
+          <Routes>
+            <Route path="/product/:slug" element={<ProductScreen />} />
+            <Route path="/" element={<HomeScreen />} />
+          </Routes>
+        </main>
+      </div>
+    </BrowserRouter>
   );
 }
 
