@@ -15,7 +15,7 @@ const data = {
 
     {
       name: 'Albania Fit Shirt',
-      slug: 'Albania Fit Shirt',
+      slug: 'Albania-Fit-Shirt',
       category: 'Shirts',
       image: '/images/p2.jpg',
       price: 25,
@@ -27,7 +27,7 @@ const data = {
     },
     {
       name: 'Pak Fit Shirt',
-      slug: 'Pak Fit Shirt',
+      slug: 'Pak-Fit-Shirt',
       category: 'Pants',
       image: '/images/p3.jpg',
       price: 25,
