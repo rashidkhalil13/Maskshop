@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Product from '../components/Product';
 import Rating from '../components/Ratings';
+import { Helmet } from 'react-helmet-async';
 
 // import data from '../data';
 
@@ -44,6 +45,9 @@ function HomeScreen() {
   }, []);
   return (
     <div>
+      <Helmet>
+        <title>Makshop</title>
+      </Helmet>
       <h1>Featured Products</h1>
       <div className="products">
         {loading ? (
