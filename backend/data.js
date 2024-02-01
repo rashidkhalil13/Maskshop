@@ -1,6 +1,7 @@
 const data = {
   products: [
     {
+      _id: '1',
       name: 'Mkd Slim Shirt',
       slug: 'Mkd-slim-shirt',
       category: 'Shirts',
@@ -14,6 +15,7 @@ const data = {
     },
 
     {
+      _id: '2',
       name: 'Albania Fit Shirt',
       slug: 'Albania-Fit-Shirt',
       category: 'Shirts',
@@ -26,6 +28,7 @@ const data = {
       description: 'high quality product',
     },
     {
+      _id: '3',
       name: 'Pak Fit Shirt',
       slug: 'Pak-Fit-Shirt',
       category: 'Pants',
@@ -38,6 +41,7 @@ const data = {
       description: 'high quality product',
     },
     {
+      _id: '4',
       name: 'Adidas Fit Pant',
       slug: 'adidas-fit-pant',
       category: 'Pants',
