@@ -1,7 +1,7 @@
 const data = {
   products: [
     {
-      _id: '1',
+      //_id: '1', will be assined automaytically by mongodb
       name: 'Mkd Slim Shirt',
       slug: 'Mkd-slim-shirt',
       category: 'Shirts',
@@ -10,12 +10,12 @@ const data = {
       countInStock: 10,
       brand: 'LcWakiki',
       rating: 4.5,
-      numReviewsn: 10,
+      numReviews: 10,
       description: 'high quality product',
     },
 
     {
-      _id: '2',
+      //_id: '2',
       name: 'Albania Fit Shirt',
       slug: 'Albania-Fit-Shirt',
       category: 'Shirts',
@@ -28,7 +28,7 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '3',
+      //_id: '3',
       name: 'Pak Fit Shirt',
       slug: 'Pak-Fit-Shirt',
       category: 'Pants',
@@ -41,7 +41,7 @@ const data = {
       description: 'high quality product',
     },
     {
-      _id: '4',
+      //_id: '4',
       name: 'Adidas Fit Pant',
       slug: 'adidas-fit-pant',
       category: 'Pants',
