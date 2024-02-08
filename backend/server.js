@@ -11,12 +11,31 @@ dotenv.config();
 
 mongoose
   .connect(process.env.MONGODB_URI)
-  .then(() => {
-    console.log('connected to db');
+  .then(async () => {
+    console.log('Connected to MongoDB');
+
+    // Seed or update the database here
+    await seedDatabase(); // Call the function to seed or update the database
   })
   .catch((err) => {
-    console.log(err.message);
+    console.error('Error connecting to MongoDB:', err.message);
   });
+
+async function seedDatabase() {
+  try {
+    // Check if data exists in the database, if not, seed the database
+    const Product = mongoose.model('Product');
+    const existingProducts = await Product.find({});
+    if (existingProducts.length === 0) {
+      await Product.insertMany(data.products);
+      console.log('Database seeded successfully');
+    } else {
+      console.log('Database already seeded');
+    }
+  } catch (error) {
+    console.error('Error seeding database:', error.message);
+  }
+}
 
 const app = express();
 
@@ -37,5 +56,5 @@ app.use((err, req, res, next) => {
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
-  console.log(`serve at http://localhost:${port}`);
+  console.log(`Server running at http://localhost:${port}`);
 });
