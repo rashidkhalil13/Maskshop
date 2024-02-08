@@ -5,7 +5,7 @@ const data = {
       slug: 'Mkd-slim-shirt',
       category: 'Shirts',
       image: '/images/p1.jpg',
-      price: 20,
+      price: 10,
       countInStock: 10,
       brand: 'LcWakiki',
       rating: 4.5,
